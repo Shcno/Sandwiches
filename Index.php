@@ -10,7 +10,7 @@
 
 <body>
     <?php
-        phpinfo();
+        echo("<h1>halloa</h1>");
     ?>
 </body>
 
