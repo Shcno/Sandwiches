@@ -2,14 +2,15 @@
     #create variables with server details on
     $servername="localhost";
     $username="root";
-    $password="password";
+    $password="Password";
 
     $conn=new PDO("mysql:host=$servername",$username,$password);
     $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    $sql="CREATE DATABASE IF NOT EXISTS Sandwiches"
-    $connn->exec($sql);
-    $sql='USE Sandwiches'
-    echo("DB made")
+    $sql="CREATE DATABASE IF NOT EXISTS Sandwiches";
+    $conn->exec($sql);
+    $sql='USE Sandwiches';
+    $conn->exec($sql);
+    echo("DB made");
     $stmt1= $conn->prepare("DROP TABLE IF EXISTS tblusers;
     
     CREATE TABLE tblusers
