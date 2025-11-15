@@ -1,4 +1,5 @@
 <?php
+    header("Location: users.php")
     print_r($_POST);
     include_once("connection.php");
     $username=$_POST["surname"].".".$_POST["forename"][0];
@@ -17,15 +18,13 @@
     ");
 
     $stmt1->bindParam(":Username",$username);
-    $stmt1->bindParam(":Surname",$_POST["surname"]);
-    $stmt1->bindParam(":Forename",$forename);
-    $stmt1->bindParam(":Password",$password;
-    $stmt1->bindParam(":Username",$username);
-    $stmt1->bindParam(":Username",$username);
-    $stmt1->bindParam(":Username",$username);
-    $stmt1->bindParam(":Username",$username);
+    $stmt1->bindParam(":Forename",$_POST["surname"]);
+    $stmt1->bindParam(":Password",$_POST["forename"]);
+    $stmt1->bindParam(":Username",$_POST["password"]);
+    $stmt1->bindParam(":Username",$_POST["year"]);
+    $stmt1->bindParam(":Username",$_POST["Balance"]);
+    $stmt1->bindParam(":Role",$role);
 
     $stmt1->execute();
 ?>
 
-#STRC 12
